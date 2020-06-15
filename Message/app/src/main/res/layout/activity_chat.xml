@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorButtonNormal"
+    tools:context="com.example.arbindtechguy.message.ChatActivity">
+
+    <include
+        android:id="@+id/chatbar"
+        layout="@layout/chat_custom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+    </include>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="368dp"
+        android:layout_height="58dp"
+        android:layout_marginRight="8dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/select_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_select_image" />
+
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="write a message..."
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/send_message"
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/ic_send" />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messages_list_of_users"
+        android:layout_width="368dp"
+        android:layout_height="224dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatbar"
+        app:layout_constraintVertical_bias="0.025" />
+
+</android.support.constraint.ConstraintLayout>
